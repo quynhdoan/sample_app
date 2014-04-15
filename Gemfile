@@ -5,6 +5,7 @@ ruby '2.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 gem 'pg'
+gem 'foundation-rails'
 
 group :development, :test do
     #gem 'sqlite3'
@@ -47,6 +48,8 @@ group :production do
 end
 
 gem 'haml'
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

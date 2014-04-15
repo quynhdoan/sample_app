@@ -12,6 +12,7 @@ require "sprockets/railtie"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+#Bundler.require(:default, Rails.env)
 
 module SampleApp
   class Application < Rails::Application
@@ -26,5 +27,8 @@ module SampleApp
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.generators do |g|
+        g.template_engine :haml
+    end
   end
 end

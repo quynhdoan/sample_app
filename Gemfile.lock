@@ -27,7 +27,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    arel (5.0.0)
+    arel (5.0.1.20140414130214)
     builder (3.2.2)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -55,6 +55,9 @@ GEM
     execjs (2.0.2)
     ffi (1.9.3)
     formatador (0.2.4)
+    foundation-rails (5.2.2.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
     guard (2.6.0)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -91,7 +94,7 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.5.3)
-    minitest (5.3.2)
+    minitest (5.3.3)
     multi_json (1.9.2)
     nio4r (1.0.0)
     nokogiri (1.6.1)
@@ -202,6 +205,7 @@ DEPENDENCIES
   capybara
   childprocess
   coffee-rails (~> 4.0.0)
+  foundation-rails
   guard-rspec
   guard-spork
   haml

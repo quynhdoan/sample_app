@@ -1,25 +1,53 @@
 !!! 5
-%html
+%html{:lang => "en"}
     %head
+        %meta{:charset => "utf-8"}
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+
         %title= full_title(yield (:title))
         = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
         = javascript_include_tag 'application', 'data-turbolinks-track' => true
+        = javascript_include_tag "vendor/modernizr"
         = csrf_meta_tags
-
+        /[if lt IE 9]
+            %script {:src => "http://html5shim.googlecode.com/svn/trunk/html5.js}
     %body
-        = yield
-        
--# <!DOCTYPE html>
--# <html>
--# <head>
--#   <title>SampleApp</title>
--#   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
--#   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
--#   <%= csrf_meta_tags %>
--# </head>
--# <body>
+        %nav{:class => "top-bar"}
+            %ul{:class => "title-area"}
+                %li{:class => "name"}
+                    %h1
+                        %a= link_to "Sample App", "#", id: "logo"
+            %section{:class => "top-bar-section"}
+                %ul{:class => "right"}
+                    %li{:class => "divider"}
+                    %li{:class => "name"}
+                        %h1= link_to "Home", "#"
+                    %li{:class => "divider"}
+                    %li{:class => "name"}
+                        %h1= link_to "Help", "#"
+                    %li{:class => "divider"}
+                    %li{:class => "name"}
+                        %h1= link_to "Sign in", "#"
+        .row
+            .small-3.large-4.columns
+                = yield
 
--# <%= yield %>
 
--# </body>
--# </html>
+-# !!! 5
+-# %html{ :lang => "en"}
+-#   %head
+-#     %meta{ :charset => "utf-8" }
+
+-#     %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
+
+-#     %title= content_for?(:title) ? yield(:title) : "Untitled"
+
+-#     = stylesheet_link_tag "application"
+-#     = javascript_include_tag "vendor/modernizr"
+-#     = csrf_meta_tag
+
+-#   %body
+
+-#     = yield
+
+-#     = javascript_include_tag "application"
