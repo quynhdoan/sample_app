@@ -1,0 +1,11 @@
+%nav{:class => "navbar navbar-fixed-top navbar-inverse", :role => "navigation"}
+    .container-fluid
+        .navbar-header
+            = link_to "Sample App", root_path, id: "logo", class: "navbar-brand"
+        %ul{:class => "nav navbar-nav navbar-right"}
+            %li
+                = link_to "Home", root_path
+            %li
+                = link_to "Help", help_path
+            %li
+                = link_to "Sign in", "#"
