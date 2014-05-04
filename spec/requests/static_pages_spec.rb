@@ -10,7 +10,7 @@ describe "Static Pages" do
 
     describe "Home page" do
         before { visit root_path }
-        let(:heading)       { "Sample App" }
+        let(:heading)       { "Welcome" }
         let(:page_title)    { '' }
 
         it_should_behave_like "all static pages"
@@ -52,7 +52,7 @@ describe "Static Pages" do
         click_link "Home"
         click_link "Sign up now!"
         expect(page).to have_title(full_title("Sign up"))
-        click_link "Sample App"
+        click_link "Home"
         expect(page).to have_title(full_title(""))
     end
 end

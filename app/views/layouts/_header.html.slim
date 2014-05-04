@@ -2,10 +2,8 @@ nav class=("navbar navbar-fixed-top navbar-inverse") role="navigation"
     .navbar-inner
         .container-fluid
             .navbar-header
-                = link_to "Sample App", root_path, id: "logo", class: "navbar-brand"
+                = link_to "Home", root_path, id: "logo", class: "navbar-brand"
             ul class=("nav navbar-nav navbar-right")
-                li
-                    = link_to "Home", root_path
                 li
                     = link_to "Help", help_path
                 - if signed_in?

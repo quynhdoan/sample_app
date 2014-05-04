@@ -50,7 +50,6 @@ group :production do
     gem 'rails_12factor'
 end
 
-gem 'haml-rails'
 gem 'slim-rails'
 
 # Use ActiveModel has_secure_password

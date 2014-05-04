@@ -1,16 +1,16 @@
-!!! 5
-%html{:lang => "en"}
-    %head
-        %meta{:charset => "utf-8"}
-        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+doctype 5
+html lang="en"
+    head
+        meta charset="utf-8"
+        meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-        %title= full_title(yield (:title))
+        title= full_title(yield (:title))
         = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
         = javascript_include_tag 'application', 'data-turbolinks-track' => true
         = csrf_meta_tags
         = render "layouts/shim"
 
-    %body
+    body
         = render "layouts/header"
         .container
             - flash.each do |key, value|
